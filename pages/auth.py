@@ -6,7 +6,7 @@ st.set_page_config(page_title="Login", page_icon="🔒", layout="centered")
 # Configurar credenciales
 users = {"admin": "pbkdf2:sha256:260000$Wxyz..."}
 
-authenticator = stauth.Authenticate(users, "mi_app", "auth_cookie", cookie_expiry_days=30)
+authenticator = stauth.Authenticate(users, "modernapp.py", "auth_cookie", cookie_expiry_days=30)
 name, authentication_status, username = authenticator.login("Iniciar Sesión", "main")
 
 if authentication_status:
